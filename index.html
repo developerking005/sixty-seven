@@ -3,8 +3,13 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Work From Home Job</title>
-    <!-- Meta Pixel Code -->
+    <title>Handwriting Work</title>
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
+        <!-- Meta Pixel Code -->
 <script>
 !function(f,b,e,v,n,t,s)
 {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
@@ -22,11 +27,6 @@ src="https://www.facebook.com/tr?id=1472361114287641&ev=PageView&noscript=1"
 /></noscript>
 <!-- End Meta Pixel Code -->
 
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap"
-      rel="stylesheet"
-    />
-
     <style>
       * {
         margin: 0;
@@ -35,238 +35,696 @@ src="https://www.facebook.com/tr?id=1472361114287641&ev=PageView&noscript=1"
         font-family: "Poppins", sans-serif;
       }
 
+      /* BASE */
       body {
-        background: #f2f3f5;
+        background: linear-gradient(180deg, #1e63e9, #11a7d8);
         text-align: center;
-        padding: 40px 15px;
+        color: #fff;
       }
 
-      /* ===== GLOWING BUTTON ===== */
+      .container {
+        max-width: 420px;
+        margin: auto;
+        padding: 25px 18px 40px;
+      }
 
-      .join-btn {
-        position: relative;
-        background: linear-gradient(45deg, #1f6ea9, #2aa8ff);
-        color: white;
-        padding: 16px 30px;
+      /* BADGE */
+      .badge {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        background: rgba(255, 255, 255, 0.2);
+        padding: 12px 22px;
         border-radius: 50px;
         font-weight: 600;
-        margin: 25px auto;
-        cursor: pointer;
-        max-width: 420px;
-        overflow: hidden;
-        transition: all 0.3s ease;
-        letter-spacing: 0.5px;
-
-        box-shadow: 0 0 10px rgba(42, 168, 255, 0.6),
-          0 0 20px rgba(42, 168, 255, 0.4), 0 0 40px rgba(42, 168, 255, 0.2);
-
-        animation: pulseGlow 2.5s infinite alternate;
+        font-size: 14px;
+        margin-bottom: 25px;
+        backdrop-filter: blur(8px);
       }
 
-      .join-btn:hover {
-        transform: translateY(-3px) scale(1.02);
-        box-shadow: 0 0 15px rgba(42, 168, 255, 0.9),
-          0 0 30px rgba(42, 168, 255, 0.6), 0 0 60px rgba(42, 168, 255, 0.4);
+      /* HERO */
+      .main-title {
+        font-size: 36px;
+        font-weight: 700;
+        line-height: 1.25;
+        margin-bottom: 20px;
+      }
+      .main-title span {
+        color: #ffd84d;
       }
 
-      /* Shine Effect */
-      .join-btn::before {
-        content: "";
-        position: absolute;
-        top: 0;
-        left: -100%;
-        width: 60%;
-        height: 100%;
-        background: linear-gradient(
-          120deg,
-          transparent,
-          rgba(255, 255, 255, 0.5),
-          transparent
-        );
-        transform: skewX(-25deg);
+      .desc {
+        font-size: 18px;
+        line-height: 1.6;
+        opacity: 0.95;
+        margin-bottom: 30px;
       }
 
-      .join-btn:hover::before {
-        animation: shine 1s ease;
-      }
-
-      @keyframes shine {
-        100% {
-          left: 150%;
-        }
-      }
-
-      @keyframes pulseGlow {
-        from {
-          box-shadow: 0 0 10px rgba(42, 168, 255, 0.5),
-            0 0 20px rgba(42, 168, 255, 0.3);
-        }
-        to {
-          box-shadow: 0 0 20px rgba(42, 168, 255, 0.9),
-            0 0 40px rgba(42, 168, 255, 0.6);
-        }
-      }
-
-      /* ===== TEXT ===== */
-
-      .title {
-        font-size: 28px;
-        color: #1f6ea9;
-        font-weight: 600;
-        margin-top: 20px;
-      }
-
-      .sub-text {
-        color: #1fa64a;
-        font-size: 16px;
-        margin: 15px 0 30px;
-      }
-
-      /* ===== BADGE ===== */
-
-      .badge {
-        width: 120px;
-        height: 120px;
-        margin: 0 auto 25px;
-        border-radius: 50%;
-        background: white;
+      /* CTA BUTTON */
+      .telegram-btn {
+        background: #eee;
+        color: #1e63e9;
+        font-weight: 700;
+        padding: 18px;
+        border-radius: 50px;
         display: flex;
-        flex-direction: column;
         justify-content: center;
         align-items: center;
-        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-        border: 3px solid #e6f5ea;
+        gap: 10px;
+        font-size: 18px;
+        cursor: pointer;
+        transition: 0.3s;
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+        margin-bottom: 30px;
+      }
+      .telegram-btn:hover {
+        transform: translateY(-3px);
       }
 
-      .badge span {
+      /* CARDS */
+      .card {
+        background: rgba(255, 255, 255, 0.18);
+        border-radius: 20px;
+        padding: 35px 20px;
+        margin-bottom: 20px;
+        backdrop-filter: blur(8px);
+        box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.2);
+      }
+      .card h2 {
+        font-size: 38px;
+        margin-bottom: 8px;
+      }
+      .card p {
+        opacity: 0.9;
+      }
+
+      /* FEATURES ROW */
+      .features {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 12px;
+        margin: 25px 0;
+        font-weight: 500;
+      }
+      .feature {
+        display: flex;
+        align-items: center;
+        gap: 6px;
+        font-size: 15px;
+      }
+
+      /* STICKY BUTTON */
+      .bottom-btn {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        background: #e9e9e9;
+        padding: 15px;
+        box-shadow: 0 -5px 20px rgba(0, 0, 0, 0.2);
+      }
+      .bottom-btn button {
+        width: 100%;
+        border: none;
+        padding: 16px;
+        border-radius: 40px;
         font-weight: 700;
-        color: #2aa84a;
-        font-size: 22px;
+        font-size: 18px;
+        color: #1e63e9;
+        cursor: pointer;
       }
 
-      .badge small {
-        color: #2aa84a;
-        font-weight: 600;
+      /* WHY + HOW COMMON BG */
+      .why-section,
+      .how-section {
+        background: #f2f2f2;
+        color: #222;
       }
 
-      /* ===== SECTION TITLE ===== */
-
-      .section-title {
-        font-size: 26px;
+      /* WHY */
+      .why-section {
+        padding: 50px 20px 120px;
+      }
+      .why-title {
+        font-size: 34px;
         font-weight: 700;
-        color: #2aa84a;
+        margin-bottom: 35px;
+      }
+
+      .why-card {
+        background: #e9e9e9;
+        padding: 35px 25px;
+        border-radius: 28px;
+        margin-bottom: 25px;
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        text-align: left;
+      }
+
+      .why-icon {
+        width: 70px;
+        height: 70px;
+        background: linear-gradient(135deg, #1e63e9, #11a7d8);
+        border-radius: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 30px;
+        color: #fff;
         margin-bottom: 20px;
       }
 
-      /* ===== LIST ===== */
-
-      .list {
-        text-align: left;
-        max-width: 420px;
-        margin: 0 auto 30px;
+      .why-card h3 {
+        font-size: 26px;
+        margin-bottom: 12px;
+      }
+      .why-card p {
+        color: #555;
+        line-height: 1.7;
+        font-size: 17px;
       }
 
-      .list li {
-        list-style: none;
-        margin: 14px 0;
+      /* HOW */
+      .how-section {
+        padding: 60px 20px 120px;
+      }
+      .how-title {
+        font-size: 34px;
+        font-weight: 700;
+        margin-bottom: 40px;
+      }
+
+      .step {
         display: flex;
-        align-items: center;
-        font-size: 16px;
-        color: #333;
+        gap: 20px;
+        margin-bottom: 40px;
+        align-items: flex-start;
       }
 
-      .check {
-        background: #e6f5ea;
-        color: #2aa84a;
-        width: 26px;
-        height: 26px;
+      .step-number {
+        min-width: 60px;
+        height: 60px;
         border-radius: 50%;
+        background: linear-gradient(135deg, #1e63e9, #11a7d8);
         display: flex;
-        justify-content: center;
         align-items: center;
-        margin-right: 12px;
-        font-weight: bold;
+        justify-content: center;
+        color: #fff;
+        font-size: 24px;
+        font-weight: 700;
       }
 
-      /* ===== LIMITED TEXT ===== */
+      .step-content h3 {
+        font-size: 26px;
+        margin-bottom: 10px;
+      }
+      .step-content p {
+        color: #555;
+        line-height: 1.7;
+        font-size: 17px;
+      }
 
-      .limited {
-        color: #1f6ea9;
-        font-style: italic;
-        font-weight: 500;
-        margin: 20px 0 25px;
+      /* STEP 3 */
+      .step3-section {
+        background: #ededed;
+        padding: 70px 20px;
+        color: #222;
+      }
+      .step3-circle {
+        width: 80px;
+        height: 80px;
+        margin: auto;
+        border-radius: 50%;
+        background: linear-gradient(135deg, #1e63e9, #11a7d8);
+        color: #fff;
+        font-size: 34px;
+        font-weight: 700;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 25px;
+      }
+      .step3-title {
+        font-size: 34px;
+        margin-bottom: 20px;
+      }
+      .step3-desc {
+        font-size: 18px;
+        color: #555;
+        line-height: 1.7;
+        max-width: 520px;
+        margin: auto;
+        margin-bottom: 35px;
+      }
+      .step3-btn {
+        background: #e9e9e9;
+        color: #1e63e9;
+        font-weight: 700;
+        padding: 20px;
+        border-radius: 50px;
+        max-width: 500px;
+        margin: auto;
+        cursor: pointer;
+        box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+        transition: 0.3s;
+      }
+      .step3-btn:hover {
+        transform: translateY(-4px);
+      }
+
+      /* PLAN */
+      .plan-section {
+        background: #e6e7ec;
+        padding: 70px 20px 130px;
+        color: #222;
+      }
+      .plan-title {
+        font-size: 36px;
+        font-weight: 700;
+        margin-bottom: 40px;
+      }
+
+      .plan-card {
+        background: #f7f7f7;
+        border-radius: 35px;
+        padding: 50px 25px;
+        max-width: 420px;
+        margin: 0 auto 40px;
+        box-shadow: 0 20px 50px rgba(0, 0, 0, 0.12);
+      }
+
+      .plan-name {
+        color: #555;
+        letter-spacing: 2px;
+        font-weight: 600;
+        margin-bottom: 20px;
+      }
+      .plan-price {
+        font-size: 60px;
+        color: #1e63e9;
+        margin-bottom: 15px;
+      }
+      .plan-label {
+        color: #666;
         font-size: 18px;
       }
 
-      /* ===== NOTE ===== */
-
-      .note {
-        font-size: 13px;
-        color: #777;
-        margin-top: 20px;
+      .divider {
+        height: 1px;
+        background: #ddd;
+        margin: 30px 0;
       }
 
-      .note b {
-        color: #2aa84a;
+      .plan-features {
+        list-style: none;
+        text-align: left;
+        margin-bottom: 30px;
+      }
+      .plan-features li {
+        margin-bottom: 18px;
+        font-size: 18px;
+        padding-left: 38px;
+        position: relative;
+        color: #222;
+      }
+      .plan-features li::before {
+        content: "✔";
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 24px;
+        height: 24px;
+        border-radius: 50%;
+        background: #1cc96b;
+        color: #fff;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 14px;
+      }
+
+      /* deposit */
+      .deposit-box {
+        border: 2px solid #8be0b1;
+        background: #eafaf1;
+        padding: 25px;
+        border-radius: 20px;
+      }
+      .deposit-box p {
+        color: #18b865;
+        font-weight: 700;
+        letter-spacing: 1px;
+        margin-bottom: 10px;
+      }
+      .deposit-box h4 {
+        color: #18b865;
+        font-size: 38px;
+      }
+
+      /* popular */
+      .plan-card.popular {
+        border: 3px solid #1e63e9;
+        position: relative;
+        margin-top: 70px;
+      }
+      .popular-badge {
+        position: absolute;
+        top: -22px;
+        left: 50%;
+        transform: translateX(-50%);
+        background: #1e63e9;
+        color: #fff;
+        padding: 12px 30px;
+        border-radius: 40px;
+        font-weight: 700;
+        font-size: 14px;
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+      }
+
+      /* FINAL CTA */
+      .final-cta {
+        background: linear-gradient(180deg, #1b1b1b, #2a2a2a);
+        padding: 90px 20px;
+        color: #fff;
+      }
+      .cta-title {
+        font-size: 42px;
+        margin-bottom: 25px;
+      }
+      .cta-sub {
+        font-size: 20px;
+        opacity: 0.9;
+        margin-bottom: 40px;
+        line-height: 1.6;
+      }
+      .cta-button {
+        background: #16d66f;
+        color: #fff;
+        font-weight: 700;
+        padding: 22px;
+        border-radius: 60px;
+        max-width: 520px;
+        margin: auto;
+        font-size: 20px;
+        cursor: pointer;
+        transition: 0.3s;
+        box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4);
+      }
+      .cta-button:hover {
+        transform: translateY(-5px);
+        background: #10c863;
+      }
+
+      .cta-features {
+        margin-top: 35px;
+        display: flex;
+        justify-content: center;
+        gap: 30px;
+        flex-wrap: wrap;
+        font-size: 16px;
+        opacity: 0.9;
+      }
+
+      /* FOOTER */
+      .footer {
+        background: #111;
+        color: #aaa;
+        padding: 20px;
+        font-size: 14px;
+      }
+
+      /* MOBILE */
+      @media (max-width: 500px) {
+        .step {
+          flex-direction: column;
+        }
+        .step-number {
+          margin-bottom: 15px;
+        }
       }
     </style>
   </head>
 
   <body>
-    <!-- BUTTON TOP -->
-    <div class="join-btn" onclick="joinTelegram()">
-      JOIN TELEGRAM & START WORK 💼
+    <div class="container">
+      <div class="badge">⚡ 1000+ Active Members Earning Daily</div>
+      <div class="badge">HandWriting Job</div>
+
+      <h1 class="main-title">
+        Earn <span>₹23,500-45,000</span><br />
+        Monthly from Home
+      </h1>
+
+      <p class="desc">
+        India's trusted handwriting work platform. No experience needed.
+        Materials delivered to your door. Start earning this week!
+      </p>
+
+      <div class="telegram-btn" onclick="joinTelegram()">
+        📩 JOIN ON TELEGRAM NOW
+      </div>
+
+      <div class="card">
+        <h2 id="members">0+</h2>
+        <p>Active Members</p>
+      </div>
+
+      <div class="card">
+        <h2 id="paid">₹0L+</h2>
+        <p>Total Paid Out</p>
+      </div>
+
+      <div class="card">
+        <h2>4.9★</h2>
+        <p>User Rating</p>
+      </div>
+
+      <div class="features">
+        <div class="feature">✅ 100% Genuine</div>
+        <div class="feature">✅ ISO Certified</div>
+        <div class="feature">✅ Instant Start</div>
+      </div>
+
+      <!-- WHY CHOOSE SECTION -->
+      <section class="why-section">
+        <h2 class="why-title">Why Choose Vishv Publishers?</h2>
+
+        <div class="why-card">
+          <div class="why-icon">🏠</div>
+          <h3>Work From Anywhere</h3>
+          <p>
+            Complete your work from the comfort of your home. No commute, no
+            office politics. Just you and your pen.
+          </p>
+        </div>
+
+        <div class="why-card">
+          <div class="why-icon">₹</div>
+          <h3>Guaranteed Earnings</h3>
+          <p>
+            Earn ₹23,500–45,000 per month based on your plan. Get 50% advance
+            payment within the first week.
+          </p>
+        </div>
+
+        <div class="why-card">
+          <div class="why-icon">📦</div>
+          <h3>Materials Delivered</h3>
+          <p>
+            All notebooks, pens, and materials delivered to your doorstep. Just
+            copy the content and submit scanned pages.
+          </p>
+        </div>
+
+        <div class="why-card">
+          <div class="why-icon">⏰</div>
+          <h3>Flexible Schedule</h3>
+          <p>
+            Work at your own pace. Complete assignments within the given
+            deadline. Perfect for students and homemakers.
+          </p>
+        </div>
+
+        <div class="why-card">
+          <div class="why-icon">🛡</div>
+          <h3>Secure & Trusted</h3>
+          <p>
+            100% genuine company with transparent payment system. Safe, secure
+            and trusted by thousands of members across India.
+          </p>
+        </div>
+      </section>
+      <!-- HOW IT WORKS SECTION -->
+      <section class="how-section">
+        <h2 class="how-title">How It Works</h2>
+
+        <div class="step">
+          <div class="step-number">1</div>
+          <div class="step-content">
+            <h3>Join Our Telegram Channel</h3>
+            <p>
+              Click the button and join our official Telegram channel. Browse
+              available projects and choose one that fits your schedule and
+              earning goals.
+            </p>
+          </div>
+        </div>
+
+        <div class="step">
+          <div class="step-number">2</div>
+          <div class="step-content">
+            <h3>Register & Get Kit Delivered</h3>
+            <p>
+              Pay the fully refundable security deposit. Your writing kit with
+              notebooks, pens, and instructions will be delivered to your
+              address. Get 50% advance payment within 30 minutes!
+            </p>
+          </div>
+        </div>
+
+        <div class="step3-circle">3</div>
+
+        <h2 class="step3-title">Complete Work & Get Paid</h2>
+
+        <p class="step3-desc">
+          Write at your own pace, scan the completed pages, and submit online.
+          Receive your full payment + deposit refund within 24 hours!
+        </p>
+
+        <div class="step3-btn" onclick="joinTelegram()">
+          ✈ START EARNING TODAY
+        </div>
+      </section>
+
+      <section class="plan-section">
+        <h2 class="plan-title">Choose Your Plan</h2>
+
+        <!-- PLAN 01 -->
+        <div class="plan-card">
+          <p class="plan-name">PLAN 01</p>
+          <h3 class="plan-price">₹23,500</h3>
+          <p class="plan-label">Monthly Salary</p>
+
+          <div class="divider"></div>
+
+          <ul class="plan-features">
+            <li>50 Pages (100 Sides)</li>
+            <li>7 Days Duration</li>
+            <li>50% Advance Payment</li>
+            <li>Free Home Delivery</li>
+          </ul>
+
+          <div class="deposit-box">
+            <p>REFUNDABLE DEPOSIT</p>
+            <h4>₹550</h4>
+          </div>
+        </div>
+
+        <!-- PLAN 02 -->
+        <div class="plan-card popular">
+          <div class="popular-badge">MOST POPULAR</div>
+
+          <p class="plan-name">PLAN 02</p>
+          <h3 class="plan-price">₹28,000</h3>
+          <p class="plan-label">Monthly Salary</p>
+
+          <div class="divider"></div>
+
+          <ul class="plan-features">
+            <li>70 Pages (140 Sides)</li>
+            <li>7 Days Duration</li>
+            <li>50% Advance Payment</li>
+            <li>Free Home Delivery</li>
+          </ul>
+
+          <div class="deposit-box">
+            <p>REFUNDABLE DEPOSIT</p>
+            <h4>₹750</h4>
+          </div>
+        </div>
+        <!-- PLAN 03 -->
+        <div class="plan-card">
+          <p class="plan-name">PLAN 03</p>
+          <h3 class="plan-price">₹45,000</h3>
+          <p class="plan-label">Monthly Salary</p>
+
+          <div class="divider"></div>
+
+          <ul class="plan-features">
+            <li>120 Pages (240 Sides)</li>
+            <li>30 Days Duration</li>
+            <li>50% Advance Payment</li>
+            <li>Free Home Delivery</li>
+          </ul>
+
+          <div class="deposit-box">
+            <p>REFUNDABLE DEPOSIT</p>
+            <h4>₹1,250</h4>
+          </div>
+        </div>
+      </section>
+      <section class="final-cta">
+        <h2 class="cta-title">Ready to Start Earning?</h2>
+
+        <p class="cta-sub">
+          Join thousands of Indians making money from home every month
+        </p>
+
+        <div class="cta-button" onclick="joinTelegram()">
+          ✈ JOIN TELEGRAM NOW – IT'S FREE!
+        </div>
+
+        <div class="cta-features">
+          <span>🔒 No Credit Card Required</span>
+          <span>⚡ Instant Access</span>
+        </div>
+      </section>
+
+      <footer class="footer">
+        © 2026 Vishv Book Publishers. All rights reserved.
+      </footer>
     </div>
 
-    <!-- TEXT -->
-    <div class="title">Work From Home Job ✍</div>
-    <div class="sub-text">No Investment · Simple Work · Weekly Payment</div>
-
-    <!-- BADGE -->
-    <div class="badge">
-      <span>GLOBAL BOOK </span>
-      <small> PUBLISHERS ✔</small>
-    </div>
-
-    <!-- SECTION -->
-    <div class="section-title">Handwriting Work</div>
-
-    <ul class="list">
-      <li>
-        <div class="check">✓</div>
-        Part Time & Full Time Available
-      </li>
-      <li>
-        <div class="check">✓</div>
-        Fresher & Students Can Apply
-      </li>
-      <li>
-        <div class="check">✓</div>
-        Earn ₹18,000 – ₹25,000 Monthly
-      </li>
-      <li>
-        <div class="check">✓</div>
-        No Experience Required
-      </li>
-    </ul>
-
-    <div class="limited">Limited Seats Available – Apply Today 🚀</div>
-
-    <!-- BUTTON BOTTOM -->
-    <div class="join-btn" onclick="joinTelegram()">
-      JOIN TELEGRAM & START WORK 💼
-    </div>
-
-    <div class="note">
-      <b>Note:</b> This is a genuine handwriting-based work opportunity. Read
-      details carefully before applying.
+    <div class="bottom-btn">
+      <button onclick="joinTelegram()">📩 JOIN TELEGRAM NOW</button>
     </div>
 
     <script>
+      /* Counter Animation */
+      function animateCounter(
+        id,
+        target,
+        prefix = "",
+        suffix = "+",
+        duration = 1500
+      ) {
+        let el = document.getElementById(id);
+        let start = 0;
+        let stepTime = Math.abs(Math.floor(duration / target));
+
+        let timer = setInterval(() => {
+          start += Math.ceil(target / 50);
+
+          if (start >= target) {
+            start = target;
+            clearInterval(timer);
+          }
+
+          el.innerText = prefix + start + suffix;
+        }, stepTime);
+      }
+
+      /* Run Counters on Load */
+      window.onload = () => {
+        animateCounter("members", 1000, "", "+");
+        animateCounter("paid", 50, "₹", "L+");
+      };
+
+      /* Telegram Redirect */
       function joinTelegram() {
-        // 👉 PUT YOUR TELEGRAM LINK HERE
-        window.location.href = "https://t.me/+jtKEhdbAhXE5YzJl";
+        window.location.href = "https://t.me/+9T_6Y94Qv1Y4ODQ1";
       }
     </script>
   </body>
 </html>
+
